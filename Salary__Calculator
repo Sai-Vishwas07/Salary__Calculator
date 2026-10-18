@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int id;
+    float basic, hra, gross, pf, tax, deductions, net;
+
+    printf("Enter Employee ID: ");
+    scanf("%d", &id);
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &basic);
+
+    hra = basic * 20 / 100;
+    gross = basic + hra;
+    pf = basic * 12 / 100;
+    tax = basic * 5 / 100;
+    deductions = pf + tax;
+    net = gross - deductions;
+
+    printf("\n Salary Slip \n");
+    printf("Employee ID:    %d\n", id);
+    printf("Basic Salary:   %.2f\n", basic);
+    printf("HRA (20%%):      %.2f\n", hra);
+    printf("Gross Salary:   %.2f\n", gross);
+    printf("PF (12%%):       %.2f\n", pf);
+    printf("Income Tax (5%%): %.2f\n", tax);
+    printf("Total Deductions: %.2f\n", deductions);
+    printf("Net Salary:     %.2f\n", net);
+
+    return 0;
+}
